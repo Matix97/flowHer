@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8081}
+#  servlet:
+#    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+
+flowable:
+  common:
+    app:
+      idm-url: ${FLOWABLE_IDM_URL:http://localhost:8081/flowable-idm}
+      idm-redirect-url: ${FLOWABLE_IDM_URL:http://localhost:8081/flowable-idm}
+  modeler:
+    app:
+      deployment-api-url: ${FLOWABLE_TASK_API_URL:http://localhost:8082/flowable-task/app-api}

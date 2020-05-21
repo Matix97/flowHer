@@ -1,0 +1,21 @@
+{
+  "name": "digibp-flowable-example",
+  "website": "https://andreasmartin.ch",
+  "env": {
+    "PATH_TO_PROJECT": {
+      "description": "The path to the default deployment of the multi module project.",
+      "value": "flowable-idm"
+    },
+      "MAVEN_CUSTOM_OPTS": {
+      "description": "Define the default deployment of the multi module project.",
+      "value": "-pl flowable-idm"
+    },
+    "FLOWABLE_IDM_URL": {
+      "value": "https://digibp-flowable-idm.herokuapp.com/flowable-idm"
+    },
+    "FLOWABLE_TASK_API_URL": {
+      "value": "https://digibp-flowable-task.herokuapp.com/flowable-task/app-api"
+    }
+  },
+  "addons": [ "heroku-postgresql" ]
+}
